@@ -1,0 +1,169 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+  min-height: 520px;
+  max-height: 760px;
+}
+
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+}
+
+.hero-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 7%;
+}
+
+/* faint big word behind the text, e.g. "Over Ear" */
+.hero-bg-text {
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(90px, 14vw, 230px);
+  font-weight: 700;
+  white-space: nowrap;
+  color: #1c1c1c;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 45%;
+}
+
+.hero-title {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin-bottom: 14px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #d4d4d4;
+  max-width: 460px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.hero-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-price .final-price {
+  font-size: 18px;
+}
+
+.hero-price .original-price {
+  font-size: 14px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 14px;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88%;
+}
+
+.hero-image img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* dots are also used by the featured slider and related products */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #4a4a4a;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--red);
+}
+
+.hero-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .hero-slide {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px 70px;
+    height: auto;
+  }
+
+  .hero-text {
+    flex: none;
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    margin: 0 auto 18px;
+  }
+
+  .hero-price {
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  .hero-image {
+    order: 1;
+    flex: none;
+    height: 260px;
+  }
+
+  .hero-bg-text {
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-dots {
+    bottom: 26px;
+  }
+}

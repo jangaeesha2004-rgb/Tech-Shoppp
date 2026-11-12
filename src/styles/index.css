@@ -1,0 +1,87 @@
+:root {
+  --bg: #141414;
+  --panel: #161819;
+  --black: #000;
+  --red: #d10000;
+  --red-hover: #e60000;
+  --text: #e4e4e4;
+  --muted: #9a9a9a;
+  --line: #2c2c2c;
+  --green: #1f9d1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* section headings used on Home and Product Details */
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #cfcfcf;
+  margin: 70px 0 40px;
+}
+
+/* red buttons used everywhere */
+.btn-red {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  padding: 10px 22px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.btn-red:hover {
+  background: var(--red-hover);
+}
+
+.page {
+  min-height: calc(100vh - 60px);
+  padding-top: 60px; /* space for the fixed navbar */
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 18px;
+    margin: 50px 0 28px;
+  }
+}

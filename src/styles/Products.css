@@ -1,0 +1,146 @@
+.products-page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 14px;
+  padding-right: 18px;
+  align-items: start;
+}
+
+.filter-bar {
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding: 36px 14px 40px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1a1a1a;
+}
+
+.filter-bar h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #d4d4d4;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2c2c2c;
+  margin-bottom: 14px;
+}
+
+.filter-heading {
+  margin-top: 34px;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.filter-bar h5 {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #cfcfcf;
+  margin: 26px 0 12px;
+}
+
+.sort-btn {
+  background: none;
+  border: none;
+  color: #b8b8b8;
+  font-size: 12.5px;
+  padding: 6px 0;
+  text-align: left;
+}
+
+.sort-btn:hover {
+  color: #fff;
+}
+
+.sort-btn.active {
+  color: var(--red);
+}
+
+.check-list li {
+  margin-bottom: 4px;
+}
+
+.check-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #b8b8b8;
+  cursor: pointer;
+  padding: 3px 0;
+}
+
+.check-list input {
+  width: 13px;
+  height: 13px;
+  accent-color: var(--red);
+}
+
+.price-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  cursor: pointer;
+}
+
+.price-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: var(--red);
+  cursor: pointer;
+}
+
+.products-list {
+  padding: 36px 0 0;
+}
+
+.no-products {
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+  padding-top: 80px;
+}
+
+@media (max-width: 1100px) {
+  .products-page {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+/* on small screens the filters go above the products */
+@media (max-width: 800px) {
+  .products-page {
+    grid-template-columns: 1fr;
+    padding: 60px 14px 0;
+  }
+
+  .filter-bar {
+    position: static;
+    height: auto;
+    overflow: visible;
+    padding: 20px 4px 10px;
+  }
+
+  .products-list {
+    padding-top: 10px;
+  }
+}

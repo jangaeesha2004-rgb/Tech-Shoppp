@@ -1,0 +1,5 @@
+/* The hero slider sits directly under the fixed navbar, so the page
+   padding from .page is removed here. */
+.home.page {
+  padding-top: 60px;
+}
