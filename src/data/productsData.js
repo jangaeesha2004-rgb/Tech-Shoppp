@@ -414,4 +414,18 @@ const productsData = [
     },
 ];
 
-export default productsData;
+
+// Add GitHub Pages base path to all product images
+const productsWithBasePath = productsData.map((product) => ({
+    ...product,
+
+    heroImage: product.heroImage
+        ? `${import.meta.env.BASE_URL}${product.heroImage.replace(/^\/+/, "")}`
+        : undefined,
+
+    images: product.images.map(
+        (image) => `${import.meta.env.BASE_URL}${image.replace(/^\/+/, "")}`
+    ),
+}));
+
+export default productsWithBasePath;
